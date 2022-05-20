@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragments.TransferMoneyFragment"
+        android:background="@drawable/bankbackground">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          android:orientation="vertical">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:background="@color/purple_700"
+              android:padding="@dimen/_4sdp"
+              android:layout_margin="@dimen/_30sdp">
+              <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/ic_baseline_person_24"
+                  android:layout_margin="@dimen/_5sdp"
+
+
+                  />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="AYA ALAA"
+                  android:layout_margin="@dimen/_8sdp"
+                  android:id="@+id/tv_user_name"
+                  style="@style/TextAppearance.Material3.BodyLarge"
+
+                  />
+
+
+
+          </LinearLayout>
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/_10sdp"
+              android:text="Select user to send money : "
+              android:textSize="@dimen/_18sdp"
+              android:textColor="#272727"
+
+              />
+          <androidx.recyclerview.widget.RecyclerView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/rec_users_transfer"
+              tools:listitem="@layout/user_transfer_item"
+
+
+
+              />
+
+
+
+      </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

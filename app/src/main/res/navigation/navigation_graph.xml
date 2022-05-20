@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/welcomFragment">
+
+    <fragment
+        android:id="@+id/allUsersFragment"
+        android:name="com.example.sparksbankingaccount.Fragments.AllUsersFragment"
+        android:label="fragment_all_users"
+        tools:layout="@layout/fragment_all_users" >
+        <action
+            android:id="@+id/action_allUsersFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomFragment"
+        android:name="com.example.sparksbankingaccount.Fragments.WelcomFragment"
+        android:label="WelcomFragment"
+        tools:layout="@layout/fragment_welcom">
+        <action
+            android:id="@+id/action_welcomFragment_to_allUsersFragment2"
+            app:destination="@id/allUsersFragment" />
+        <action
+            android:id="@+id/action_welcomFragment_to_transactionHistoryFragment"
+            app:destination="@id/transactionHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.sparksbankingaccount.Fragments.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_transferMoneyFragment"
+            app:destination="@id/transferMoneyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionHistoryFragment"
+        android:name="com.example.sparksbankingaccount.Fragments.TransactionHistoryFragment"
+        android:label="fragment_transaction_history"
+        tools:layout="@layout/fragment_transaction_history" />
+    <fragment
+        android:id="@+id/transferMoneyFragment"
+        android:name="com.example.sparksbankingaccount.Fragments.TransferMoneyFragment"
+        android:label="TransferMoneyFragment" >
+        <action
+            android:id="@+id/action_transferMoneyFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.example.sparksbankingaccount.Fragments.ConfirmationFragment"
+        android:label="ConfirmationFragment" >
+        <action
+            android:id="@+id/action_confirmationFragment_to_customDialogFragment"
+            app:destination="@id/customDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/customDialogFragment"
+        android:name="com.example.sparksbankingaccount.Fragments.CustomDialogFragment"
+        android:label="fragment_custom_dialog"
+        tools:layout="@layout/fragment_custom_dialog" >
+        <action
+            android:id="@+id/action_customDialogFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </dialog>
+</navigation>
